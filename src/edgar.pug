@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
     head
-        title Page title
+        title Edgar Brown
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         meta(name="description" content="")
@@ -9,40 +9,16 @@ html(lang="en")
         link(rel="stylesheet" href="css/tailwind/tailwind-theme.css")
         link(rel="icon" href="favicon.ico")
         link(rel="icon" type="image/png" sizes="16x16" href="favicon.png")
+        script(src='https://js.stripe.com/v3')
     body.bg-body.text-body.font-body
         .container.mx-auto.px-4
 
 
-            nav
-                div(class="text-right py-2 px-4")
-                    a(href="#" class="lg:inline-block mr-6 lg:mt-0 text-sm text-blue-900 hover:text-blue-700" ) Sign in
-                    a(href="#" class="lg:inline-block lg:mt-0 text-sm text-blue-900 hover:text-blue-700" ) Sign up
-
-                div(class="flex flex-wrap items-center justify-between p-4 border-t")
-                    div(class="flex flex-shrink-0 mr-6")
-                        a(href="#" class="text-xl text-indigo-500 font-semibold" ) Dunder Mifflin
-                    div(class="block lg:hidden")
-                        <button class="flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"><svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg></button>
-                    div(class="hidden lg:flex lg:flex-grow lg:items-center w-full lg:w-auto")
-                        div(class="lg:ml-auto")
-                            a(href="#" class="block lg:inline-block mt-4 lg:mt-0 mr-12 text-blue-900 hover:text-blue-700")
-                                span Products
-                                span(class="block text-sm text-gray-500" ) Premium copy paper
-                            
-                            a(href="#" class="block lg:inline-block mt-4 lg:mt-0 mr-12 text-blue-900 hover:text-blue-700") 
-                                span Team
-                                span(class="block text-sm text-gray-500" ) Our family
-                            
-                            a(href="#" class="block lg:inline-block mt-4 lg:mt-0 mr-12 text-blue-900 hover:text-blue-700") 
-                                span Customers
-                                span(class="block text-sm text-gray-500" ) Dunder Friends
-                        div
-                            a(href="#" class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" ) Try Demo
-
+            include header.pug
             section(class="py-12 px-4")
                 div(class="flex flex-wrap -mx-4 mb-8")
                     div(class="lg:w-1/2 px-4 mb-4 lg:mb-0")
-                        img(src="placeholders/pictures/male_avatar.svg" alt="" class="rounded shadow-md" )
+                        img(src="placeholders/pictures/edgar.jpg" alt="" class="rounded shadow-md" )
                     
                     div(class="lg:w-1/2 px-4")
                         h2(class="text-4xl font-heading font-semibold" ) Your Coach is Edgar Brown
@@ -67,22 +43,21 @@ html(lang="en")
                         p(class="mt-5 mb-3" ) Select another coach:
                         div(class="flex flex-wrap -mx-4")
                             div(class="w-1/2 lg:w-1/2 px-4 mb-4 lg:mb-0")
-                                img(src="placeholders/pictures/female_avatar.svg" alt="" class="rounded shadow-md" )
-                                p(class="mt-3") Alessia Scauzillo
+                                img(src="placeholders/pictures/alessia.jpg" alt="" class="rounded shadow-md" )
+                                p(class="mt-3 text-gray-500") Alessia Scauzillo 
+                                    span(class="text-gray-900")  (Class Full)
                             div(class="w-1/2 lg:w-1/2 px-4 mb-4 lg:mb-0") 
-                                img(src="placeholders/pictures/male_avatar.svg" alt="" class="rounded shadow-md" )
-                                p(class="mt-3") Jahmeek Taylor
+                                img(src="placeholders/pictures/jahmeek.jpg" alt="" class="rounded shadow-md" )
+                                p(class="mt-3 text-gray-500") Jahmeek Taylor 
+                                    span(class="text-gray-900")  (Class Full)
                 
             div(class="fixed bottom-0 left-0 p-4 bg-white border-t w-full flex flex-row items-center")
-                a(href="#" class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" ) Select Edgar
+                button(class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" id="checkout-button-plan_G7Odihrv3cK3dC" role="link") Select Edgar
                 p(class="text-gray-500 leading-relaxed ml-3" ) You can change your coach at anytime.
+                div(id="error-message")
 
 
-            footer(class="flex flex-wrap flex-col lg:flex-row items-center p-4")
-                div(class="w-full lg:w-auto lg:mr-6 text-center" ) &copy 2019 Dunder Mifflin
-
-                div(class="mx-auto my-4 lg:my-0 lg:ml-0")
-                    a(class="inline-block mt-0 mx-4 text-blue-900 hover:text-blue-700" href="#" ) Products
-                    a(class="inline-block mt-0 mx-4 text-blue-900 hover:text-blue-700" href="#" ) Team
-
-                div Made in Scranton
+            include footer.pug
+            
+            script
+                include stripe.js

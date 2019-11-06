@@ -12,29 +12,8 @@ html(lang="en")
     body.bg-body.text-body.font-body
         .container.mx-auto.px-4
 
-            nav
-                div(class="text-right py-2 px-4")
-                    a(href="signup.html" class="lg:inline-block lg:mt-0 text-sm text-blue-900 hover:text-blue-700" ) Sign Up
-
-                div(class="flex flex-wrap items-center justify-between p-4 border-t")
-                    div(class="flex flex-shrink-0 mr-6")
-                        a(href="#" class="text-xl text-indigo-500 font-semibold" ) Beam Training
-                    div(class="block lg:hidden")
-                        <button class="flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"><svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg></button>
-                    div(class="hidden lg:flex lg:flex-grow lg:items-center w-full lg:w-auto")
-                        div(class="lg:ml-auto")
-                        
-                            a(href="faq.html" class="block lg:inline-block mt-4 lg:mt-0 mr-12 text-blue-900 hover:text-blue-700")
-                                span FAQ
-                                span(class="block text-sm text-gray-500" ) Answers to your questions
-
-                            a(href="mailto:support@iamfyt.com" class="block lg:inline-block mt-4 lg:mt-0 mr-12 text-blue-900 hover:text-blue-700") 
-                                span Support
-                                span(class="block text-sm text-gray-500" ) 24/7 assistance
-                        div
-                            a(href="signup.html" class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" ) Find Your Coach
-
-            section(class="bg-cover lg:bg-center" style="background-image: url('placeholders/pictures/office.jpg')" )
+            include header.pug
+            section(class="bg-cover lg:bg-center" style="background-image: url('placeholders/pictures/landing-page-runner-hero.jpg')" )
                 div(class="relative py-8 md:py-24 px-16")
                     div(class="absolute inset-0 bg-black opacity-50")
                     div(class="z-10 relative w-full")
@@ -43,13 +22,6 @@ html(lang="en")
                                 h2(class="text-4xl leading-tight font-heading" ) The most personal training experience, ever.
                                 p(class="my-6 text-gray-300" ) Elite coaches, 1-on-1 digital training.
                                 a(href="signup.html" class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" ) Find Your Coach
-
-                            div(class="mt-8 md:mt-0")
-                                button(class="inline-flex md:flex items-center justify-center h-2 w-2 mr-3 mb-4 bg-indigo-500 rounded-full")
-                                button(class="inline-flex md:flex items-center justify-center h-2 w-2 mr-3 mb-4 bg-white rounded-full")
-                                button(class="inline-flex md:flex items-center justify-center h-2 w-2 mr-3 mb-4 bg-white rounded-full")
-                                button(class="inline-flex md:flex items-center justify-center h-2 w-2 mr-3 mb-4 bg-white rounded-full")
-                                button(class="inline-flex md:flex items-center justify-center h-2 w-2 mr-3 mb-4 bg-white rounded-full")
 
             section(class="py-8 px-4 text-center")
                 div(class="max-w-2xl mx-auto")
@@ -66,7 +38,7 @@ html(lang="en")
                 div
                     div(class="flex flex-wrap items-center -mx-8")
                         div(class="md:w-1/2 px-8 mb-8")
-                            img(src="placeholders/pictures/new_ideas.svg" alt="" class="w-4/5 mx-auto" )
+                            img(src="placeholders/pictures/facetime-coach.png" alt="" class="w-4/5 mx-auto" )
                         div(class="md:w-1/2 px-8 mb-8")
                             span(class="text-6xl") 01
                             h3(class="text-2xl mb-3 font-heading" ) One-on-One Coaching
@@ -74,7 +46,7 @@ html(lang="en")
 
                     div(class="flex flex-wrap items-center -mx-8")
                         div(class="md:w-1/2 px-8 mb-8 md:order-1")
-                            img(src="placeholders/pictures/certificate.svg" alt="" class="w-4/5 mx-auto" )
+                            img(src="placeholders/pictures/workout-screenshot.png" alt="" class="w-4/5 mx-auto" )
                         div(class="md:w-1/2 px-8 md:text-right")
                             span(class="text-6xl") 02
                             h3(class="text-2xl mb-3 font-heading" ) Your Custom Training Plan
@@ -82,7 +54,7 @@ html(lang="en")
 
                     div(class="flex flex-wrap items-center -mx-8")
                         div(class="md:w-1/2 px-8 mb-8 order-none")
-                            img(src="placeholders/pictures/photocopy.svg" alt="" class="w-4/5 mx-auto" )
+                            img(src="placeholders/pictures/messages.png" alt="" class="w-4/5 mx-auto" )
 
                         div(class="md:w-1/2 px-8")
                             span(class="text-6xl") 03
@@ -96,20 +68,20 @@ html(lang="en")
 
                 div(class="flex flex-wrap -mx-8")
                     div(class="md:w-1/3 p-8")
-                        img(src="placeholders/pictures/female_avatar.svg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" )
+                        img(src="placeholders/pictures/alessia.jpg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" )
                         h3(class="text-xl font-heading" ) Alessia Scauzillo
-                        p(class="mt-4 text-gray-500 leading-relaxed" ) Started as a Sales representative at Stamford branch, moved to Scranton. All of us left as soon as possible except for Andy.
+                        p(class="mt-4 text-gray-500 leading-relaxed" ) Alessia is a high-energy trainer that believes in teaching fun and engaging workouts with lots of variety that will leave you with a total body burn! Her specialties include cardio and strength training.
                     
                     div(class="md:w-1/3 p-8 md:border-l")
-                        img(src="placeholders/pictures/male_avatar.svg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" ) 
+                        img(src="placeholders/pictures/edgar.jpg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" ) 
                         h3(class="text-xl font-heading" ) Edgar Brown
                         p(class="mt-4 text-gray-500 leading-relaxed" ) The warehouse is not a piece of cake, man. I started there as an Assistant and finally got a promotion to the Marketing Director.
                     
                     div(class="md:w-1/3 p-8 md:border-l")
-                        img(src="placeholders/pictures/female_avatar.svg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" )
+                        img(src="placeholders/pictures/jahmeek.jpg" alt="" class="w-1/3 mx-auto mb-4 rounded-full" )
 
                         h3(class="text-xl font-heading" ) Jahmeek Taylor
-                        p(class="mt-4 text-gray-500 leading-relaxed" ) I work for Beam Training for a few years now. I learned a lot. You know, one person department is not easy to manage.
+                        p(class="mt-4 text-gray-500 leading-relaxed" ) Jahmeek is a former varsity athlete and personal trainer that specializes in football-style training. His drill-like approach adds energy and discipline to his workouts.
 
             section(class="py-8 px-4")
                 div(class="flex flex-wrap")
@@ -147,12 +119,4 @@ html(lang="en")
                         div
                             a(href="signup.html" class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" ) Find Your Coach
 
-            footer
-                div(class="flex flex-wrap items-center py-4 px-4 border-b")
-                    div(class="w-full lg:w-1/5 text-center lg:text-left")
-                        a(class="text-xl text-indigo-500 font-semibold" href="#" ) Beam Training
-
-                div(class="py-4 text-center")
-                    span(class="block md:inline-block mb-4 md:mb-0 mx-3" href="#" ) &copy 2019 Beam Training
-                    a(class="inline-block mx-4 text-blue-900 hover:text-blue-700" href="#" ) Privacy Policy
-                    a(class="inline-block mx-4 text-blue-900 hover:text-blue-700" href="#" ) Term of Service
+            include footer.pug
