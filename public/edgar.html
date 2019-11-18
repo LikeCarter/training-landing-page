@@ -54,19 +54,16 @@ gtag('config', 'UA-57619073-7');
           <div class="lg:w-1/2 px-4">
             <h2 class="text-4xl font-heading font-semibold">Your Coach is Edgar Brown</h2>
             <p class="mt-5 ">Specialties</p>
-            <p class="text-gray-600">Mobility & Movement</p>
             <p class="text-gray-600">Strength training</p>
             <p class="text-gray-600">High-intensity interval training</p>
+            <p class="text-gray-600">Mobility & Movement </p>
             <p class="mt-5 ">About</p>
-            <p class="text-gray-600">Iris began her fitness career as a competitive soccer player throughout her entire childhood and later going on to play in college at the University of North Carolina Wilmington. While playing, she began working as an assistant coach for the Wilmington Hammerheads where she would ultimately take over as Director of the Sports Science Program. In addition to training elite soccer players, Iris also enjoyed being a fitness instructor at several wellness centers for retirement communities. Such a variety has allowed her to gain experience and confidence in modifying training around limitations, injury prevention, as well as meeting others at any fitness level.</p>
+            <p class="text-gray-600">Edgar began his fitness career as a competitive basketball player throughout his entire childhood and later going on to play in college at McGill University. After leaving, he experimented with multiple training methods including personal and online training as well as achieving a certification with the National Academy of Sports Medecine. Such a variety has allowed him to gain experience and confidence in adapting his training style to meet the goals of his clients while focusing on stability, injury prevention, as well as meeting others at any fitness level.</p>
             <p class="mt-5 ">Certified</p>
-            <p class="text-gray-600">National Strength & Conditioning Assoc. (NSCA)</p>
-            <p class="text-gray-600">Kettlebell Concepts, Level 1</p>
-            <p class="text-gray-600">BS in Exercise Science</p>
+            <p class="text-gray-600">National Academy of Sports Medecine (NASM)</p>
             <p class="mt-5 ">Loves</p>
-            <p class="text-gray-600">Soccer, volleyball, hiking, exploring, traveling</p>
-            <p class="text-gray-600">Working out, Spartan Races, Crossfit Competitions</p>
-            <p class="text-gray-600">Breweries and coffee shops</p>
+            <p class="text-gray-600">Personal development, Basketball, traveling</p>
+            <p class="text-gray-600">Working out, learning new skills</p>
             <p class="mt-5 ">Located</p>
             <p class="text-gray-600">Currently: Toronto, CA</p>
             <p class="text-gray-600">Originally: Montreal, CA</p>
@@ -83,7 +80,7 @@ gtag('config', 'UA-57619073-7');
         </div>
       </section>
       <div class="fixed bottom-0 left-0 p-4 bg-white border-t w-full flex flex-row items-center">
-        <button class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" id="checkout-button-plan_G7Odihrv3cK3dC" role="link">Select Edgar</button>
+        <button class="inline-block py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow" id="checkout-button-plan_GAQ6rU1KHV8yDK" role="link">Select Edgar</button>
         <p class="text-gray-500 leading-relaxed ml-3">You can change your coach at anytime.</p>
         <div id="error-message"></div>
       </div>
@@ -95,12 +92,12 @@ gtag('config', 'UA-57619073-7');
       <script>(function() {
   var stripe = Stripe('pk_live_n1jY6biUuSKj8HtXKVBY29RE00l8gwnlrG');
 
-  var checkoutButton = document.getElementById('checkout-button-plan_G7Odihrv3cK3dC');
+  var checkoutButton = document.getElementById('checkout-button-plan_GAQ6rU1KHV8yDK');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{plan: 'plan_G7Odihrv3cK3dC', quantity: 1}],
+      items: [{plan: 'plan_GAQ6rU1KHV8yDK', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
